@@ -10,9 +10,5 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace cicloso.tickets.tests
-{
-    [TestClass]
-    public class TheaterTest
-    {     
-    }  
+{  
 }

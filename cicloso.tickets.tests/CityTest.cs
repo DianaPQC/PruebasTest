@@ -11,10 +11,6 @@ using System.Threading.Tasks;
 
 namespace cicloso.tickets.tests
 {
-    [TestClass]
-    public class CityTest
-    {
-    }
 }
 
 
