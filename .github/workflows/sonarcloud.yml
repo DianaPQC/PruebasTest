@@ -46,4 +46,8 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"DianaPQC_PruebasTest" /o:"dianapqc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build cicloso.tickets.core\cicloso.tickets.core.csproj --configuration Release;
+          
+          dotnet test cicloso.tickets.tests\cicloso.tickets.tests.csproj --no-build --collect:"XPlat Code Coverage";
+          
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
